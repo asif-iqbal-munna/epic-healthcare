@@ -89,12 +89,9 @@ const Register = () => {
           </div>
         </form>
         <p className="py-2 text-red-500">{error}</p>
-        <div className="w-20 mt-2 grid grid-cols-2 gap-4 ">
+        <div className="w-20  grid grid-cols-2 gap-4 ">
           <button onClick={signInWithGoogle}>
-            <i className="fab fa-google text-2xl"></i>
-          </button>
-          <button>
-            <i className="fab fa-github text-2xl"></i>
+            <i className="fab fa-google text-3xl text-blue-600"></i>
           </button>
         </div>
       </div>

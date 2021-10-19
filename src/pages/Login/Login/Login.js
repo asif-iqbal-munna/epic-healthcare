@@ -109,9 +109,6 @@ const Login = () => {
           <button onClick={handledSignInWithGoogle}>
             <i className="fab fa-google text-2xl"></i>
           </button>
-          <button>
-            <i className="fab fa-github text-2xl"></i>
-          </button>
         </div>
       </div>
     </div>
