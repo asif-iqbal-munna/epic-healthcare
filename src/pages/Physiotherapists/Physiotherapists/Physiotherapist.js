@@ -15,8 +15,8 @@ const Physiotherapist = () => {
         <div className="grid mx-auto grid-col-1 justify-items-center md:grid-cols-2 gap-6 px-6">
           {doctors.map((doctor) => (
             <div
-              className="hover:shadow-2xl shadow-lg p-6 max-w-sm w-full lg:max-w-full lg:flex"
               key={doctor.id}
+              className="hover:shadow-2xl shadow-lg p-6 max-w-sm w-full lg:max-w-full lg:flex"
             >
               <div
                 className="h-48 lg:h-auto lg:w-60 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"

@@ -16,6 +16,7 @@ const auth = getAuth();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState();
+  
 
   const googleProvider = new GoogleAuthProvider();
   const signInWithGoogle = () => {
@@ -62,7 +63,6 @@ const useFirebase = () => {
       } else {
         // User is signed out
         // ...
-        setUser({});
       }
     });
   }, []);

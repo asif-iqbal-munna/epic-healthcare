@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useHistory, useLocation } from "react-router";
-import { useState } from "react/cjs/react.development";
+import { useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
@@ -12,7 +11,6 @@ const Login = () => {
   const location = useLocation();
   const history = useHistory();
   const redirectUri = location.state?.from || "/";
-  console.log(redirectUri);
   const getMail = (e) => {
     setMial(e.target.value);
   };
@@ -32,7 +30,7 @@ const Login = () => {
         const user = result.user;
         // console.log(user);
         // ...
-        
+
         history.push(redirectUri);
         // setUser(user);
       })
