@@ -27,9 +27,9 @@ function App() {
           <Route path="/physiotherapist">
             <Physiotherapist />
           </Route>
-          <Route path="/appointment">
+          <PrivateRoute path="/appointment">
             <Appoinment />
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/service/:serviceId">
             <SingleService />
           </PrivateRoute>

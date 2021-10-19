@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Epic Healthcare
+
+Live link of the site [Epic Healthcare](https://epic-healthcare.web.app/)
+
+Epic Healthcare provide physiotherapy realted service. We have expert expoerienced physiotherapists for your upmost satisfiction.
+
+- This website has Firebase authentication.
+- A user can manually create account with usrname ,email, password and can also sign in with that email and password.
+- For simplicity it also had google login system for onclick login.
+- It has privete or protected which cannot be accessed without login. so a user must login before accessing those route.
+- this site has dynamic routing and it fully responsive for all devices.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
