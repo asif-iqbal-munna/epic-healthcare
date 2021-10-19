@@ -8,6 +8,7 @@ import Footer from "./pages/Shared/Footer/Footer";
 import Header from "./pages/Shared/Header/Header";
 import SingleService from "./pages/SingleService/SingleService/SingleService";
 import Login from "./pages/Login/Login/Login";
+import Register from "./pages/Register/Register/Register";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/register">
+          <Register />
         </Route>
         <Route path="*">
           <NotFound />
