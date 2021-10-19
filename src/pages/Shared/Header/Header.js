@@ -54,6 +54,11 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <Link to="/login">
+          <button className="px-4 py-2 text-white hover:bg-indigo-900 bg-blue-900 mt-2 rounded-2xl">
+            Sign In
+          </button>
+        </Link>
         {/* <a
           href="#sdfas"
           className="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor"

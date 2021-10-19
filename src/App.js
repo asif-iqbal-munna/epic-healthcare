@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound/NotFound/NotFound";
 import Footer from "./pages/Shared/Footer/Footer";
 import Header from "./pages/Shared/Header/Header";
 import SingleService from "./pages/SingleService/SingleService/SingleService";
+import Login from "./pages/Login/Login/Login";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/service/:serviceId">
           <SingleService />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="*">
           <NotFound />
