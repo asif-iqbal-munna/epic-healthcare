@@ -4,12 +4,16 @@ import { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
-  const { signInWithGoogle, error, manuallySignUp } = useAuth();
-  const [mail, setMial] = useState("");
+  const { signInWithGoogle, error, manuallySignUp, getUserName } = useAuth();
+  const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
+  const getName = (e) => {
+    setName(e.target.value);
+  };
   const getMail = (e) => {
-    setMial(e.target.value);
+    setMail(e.target.value);
   };
   const getPassword = (e) => {
     setPassword(e.target.value);
@@ -18,6 +22,7 @@ const Register = () => {
   const handleRegistration = (e) => {
     e.preventDefault();
     manuallySignUp(mail, password);
+    getUserName(name);
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -35,6 +40,7 @@ const Register = () => {
               <div className="col-span-12">
                 <input
                   type="text"
+                  onBlur={getName}
                   name="first_name"
                   placeholder="Name"
                   autoComplete="given-name"

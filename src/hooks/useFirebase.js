@@ -4,6 +4,7 @@ import {
   getAuth,
   onAuthStateChanged,
   signOut,
+  updateProfile,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
@@ -16,7 +17,6 @@ const auth = getAuth();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState();
-  
 
   const googleProvider = new GoogleAuthProvider();
   const signInWithGoogle = () => {
@@ -49,6 +49,22 @@ const useFirebase = () => {
       .catch((error) => {
         const errorMessage = error.message;
         setError(errorMessage);
+      });
+  };
+
+  const getUserName = (name) => {
+    console.log(name);
+    updateProfile(auth.currentUser, {
+      displayName: { name },
+    })
+      .then((result) => {
+        // Profile updated!
+        // ...
+        console.log(result.user);
+      })
+      .catch((error) => {
+        // An error occurred
+        // ...
       });
   };
 
@@ -85,6 +101,7 @@ const useFirebase = () => {
     logOut,
     manuallySignUp,
     manualSignIn,
+    getUserName,
   };
 };
 
