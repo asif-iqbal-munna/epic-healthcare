@@ -4,7 +4,6 @@ import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
   const { user, logOut } = useAuth();
-  console.log(user.email, user);
   return (
     <header className="sticky top-0 lg:px-16 px-6 bg-gray-700 flex flex-wrap items-center lg:py-0 py-2 z-50">
       <div className="flex-1 flex justify-between items-center text-indigo-400 text-xl md:text-3xl font-bold">

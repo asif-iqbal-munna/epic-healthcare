@@ -4,7 +4,6 @@ import Banner from "../../Home/Banner/Banner";
 
 const Physiotherapist = () => {
   const [doctors] = useDoctors();
-  console.log(doctors);
   return (
     <>
       <Banner />
