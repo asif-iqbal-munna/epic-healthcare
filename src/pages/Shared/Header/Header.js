@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
+  console.log(user.email, user);
   return (
     <header className="sticky top-0 lg:px-16 px-6 bg-gray-700 flex flex-wrap items-center lg:py-0 py-2 z-50">
       <div className="flex-1 flex justify-between items-center text-indigo-400 text-xl md:text-3xl font-bold">
@@ -54,21 +57,23 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Link to="/login">
-          <button className="px-4 py-2 text-white hover:bg-indigo-900 bg-blue-900 mt-2 rounded-2xl">
-            Sign In
+        {user.email || user.displayName ? (
+          <button
+            onClick={logOut}
+            className="px-4 py-2 text-white hover:bg-indigo-900 bg-blue-900 mt-2 rounded-2xl"
+          >
+            Sign Out
           </button>
-        </Link>
-        {/* <a
-          href="#sdfas"
-          className="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor"
-        >
-          <img
-            className="rounded-full w-10 h-10 border-2 border-transparent hover:border-indigo-400"
-            src="https://pbs.twimg.com/profile_images/1128143121475342337/e8tkhRaz_normal.jpg"
-            alt="Andy Leverenz"
-          />
-        </a> */}
+        ) : (
+          <Link to="/login">
+            <button className="px-4 py-2 text-white hover:bg-indigo-900 bg-blue-900 mt-2 rounded-2xl">
+              Sign In
+            </button>
+          </Link>
+        )}
+        <p className="lg:ml-4 flex items-center text-white justify-start lg:mb-0 mb-4 pointer-cursor">
+          {user?.displayName || user?.email}
+        </p>
       </div>
     </header>
   );
