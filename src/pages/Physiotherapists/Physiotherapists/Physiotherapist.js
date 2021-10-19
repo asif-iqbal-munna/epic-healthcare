@@ -16,7 +16,7 @@ const Physiotherapist = () => {
           {doctors.map((doctor) => (
             <div
               className="hover:shadow-2xl shadow-lg p-6 max-w-sm w-full lg:max-w-full lg:flex"
-              key={doctor?.id}
+              key={doctor.id}
             >
               <div
                 className="h-48 lg:h-auto lg:w-60 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"

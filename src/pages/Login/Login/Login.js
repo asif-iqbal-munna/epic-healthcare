@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useHistory, useLocation } from "react-router";
 import { useState } from "react/cjs/react.development";
 import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
-  const { signInWithGoogle, error, manualSignIn } = useAuth();
+  const { signInWithGoogle, error, manualSignIn, setError, user, setUser } =
+    useAuth();
   const [mail, setMial] = useState("");
   const [password, setPassword] = useState("");
+  const location = useLocation();
+  const history = useHistory();
+  const redirectUri = location.state?.from || "/";
+  console.log(redirectUri);
   const getMail = (e) => {
     setMial(e.target.value);
   };
@@ -18,6 +24,28 @@ const Login = () => {
     e.preventDefault();
     manualSignIn(mail, password);
   };
+
+  const handledSignInWithGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        // The signed-in user info.
+        const user = result.user;
+        // console.log(user);
+        // ...
+        
+        history.push(redirectUri);
+        // setUser(user);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        // The AuthCredential type that was used.
+        setError(errorMessage);
+        // ...
+      });
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -78,9 +106,9 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <p className="py-2 text-red-500">{error}</p>
+        <p className="px-4 rounded-lg py-2 text-red-500">{error}</p>
         <div className="w-20 mt-2 grid grid-cols-2 gap-4 ">
-          <button onClick={signInWithGoogle}>
+          <button onClick={handledSignInWithGoogle}>
             <i className="fab fa-google text-2xl"></i>
           </button>
           <button>

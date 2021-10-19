@@ -16,25 +16,10 @@ const auth = getAuth();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState();
+
   const googleProvider = new GoogleAuthProvider();
   const signInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        // The signed-in user info.
-        const user = result.user;
-        // console.log(user);
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        // The AuthCredential type that was used.
-        setError(errorMessage);
-        // ...
-      });
+    return signInWithPopup(auth, googleProvider);
   };
 
   const manuallySignUp = (email, password) => {
@@ -77,12 +62,12 @@ const useFirebase = () => {
       } else {
         // User is signed out
         // ...
+        setUser({});
       }
     });
   }, []);
 
   const logOut = () => {
-    const auth = getAuth();
     signOut(auth)
       .then(() => {
         // Sign-out successful.
@@ -96,6 +81,7 @@ const useFirebase = () => {
     user,
     signInWithGoogle,
     error,
+    setError,
     logOut,
     manuallySignUp,
     manualSignIn,

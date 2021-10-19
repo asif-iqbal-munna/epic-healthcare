@@ -10,6 +10,7 @@ import SingleService from "./pages/SingleService/SingleService/SingleService";
 import Login from "./pages/Login/Login/Login";
 import Register from "./pages/Register/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
+import PrivateRoute from "./pages/Login/Login/PrivateRoute";
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
           <Route path="/appointment">
             <Appoinment />
           </Route>
-          <Route path="/service/:serviceId">
+          <PrivateRoute path="/service/:serviceId">
             <SingleService />
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>
