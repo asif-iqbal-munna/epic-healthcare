@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1001",
+        "name": "Orthopedic physical therapy",
+        "img": "https://i.ibb.co/Ssnypt3/Orthopedic-physical-therapy.jpg",
+        "description": "Orthopedic physical therapy can be life-changing. A skilled physical therapist (PT) can get you back on track with your daily activities after surgery, an injury, accident, or illness. That’s because an orthopedic PT specializes in diagnosing and treating conditions that affect any part of your musculoskeletal system. An orthopedic PT works to integrate all your other bodily systems — especially your neurological and cardiovascular systems — with your musculoskeletal system to treat your injury or condition appropriately. In this article, we’ll take a closer look at what orthopedic physical therapy is, when you may need it, and the types of treatments it includes."
+    },
+    {
+        "id": "1002",
+        "name": "Geriatric physical therapy",
+        "img": "https://i.ibb.co/QnpnX8L/Geriatric-physical-therapy.jpg",
+        "description": "Aging adults have unique health care needs. Physical and Occupational Therapists who specialize in geriatric care can meet the individual needs of older adults. As our bodies age, we lose strength, muscle mass, bone density and balance reactions. Physical therapy can play an important role in lowering your risk for falling as you age, and in preserving your independence. Exercise is a powerful tool that can slow and even reverse these naturally-occurring effects of aging. Physical and Occupational Therapists provide specific treatment recommendations with the aim of staying healthy and active. Acute illness and chronic diseases are more common in older adults. Periods of inactivity for any reason can result in deconditioning and loss of mobility. As health care professionals, physical therapists are skilled in working with people affected by these challenges. We are part of your health care team. Whether you have never exercised before or are a seasoned athlete, a Physical Therapist can help you feel and move better."
+    },
+    {
+        "id": "1003",
+        "name": "Neurological physical therapy",
+        "img": "https://i.ibb.co/bg1m6HQ/Neurological-physical-therapy.jpg",
+        "description": "If a part of the body gets injured your doctor may recommend going to physical therapy to improve and restore strength and function back into the injured muscle, ligament or tendon. The same theory holds true for the brain. The brain, just like anything else in your body, may require physical therapy if something has inflicted damage on the nervous system. Our Brooklyn, NY, neurologist Dr. Anna Kogan is here to explain how neurological physical therapy could help restore nervous system function."
+    },
+    {
+        "id": "1004",
+        "name": "Cardiovascular and pulmonary rehabilitation",
+        "img": "https://i.ibb.co/FqV9nsF/Cardiovascular-and-pulmonary-rehabilitation.jpg",
+        "description": "Cardiac and Pulmonary Rehabilitation (or Cardiopulmonary Rehabilitation) is a supervised exercise program that involves education, nutritional counseling, stress management, smoking cessation and other lifestyle changes designed to prevent or reverse the progression of cardiac and pulmonary diseases. Phelps Health’s Cardiac and Pulmonary Rehabilitation team consists of highly trained and skilled professionals who work for you. Goals of Cardiac and Pulmonary Rehabilitation include establishing an individualized plan to recondition your heart and lungs, to help you regain strength, prevent your condition from worsening, reduce your risk of future heart or lung problems and improve your functional capacity, health and quality of life. Most private insurance companies provide coverage for these Medicare-approved diagnoses and others, such as heart failure. However, this varies from carrier to carrier. Phelps Health completes verification of patients’ coverage prior to them starting the program."
+    },
+    {
+        "id": "1005",
+        "name": "Pediatric physical therapy",
+        "img": "https://i.ibb.co/gjqrBYc/Pediatric-physical-therapy.jpg",
+        "description": "Children deserve every opportunity when it comes to their futures, and Athletico takes great pride and care in making sure those opportunities are in reach. Our Pediatric Physical Therapy offers a comprehensive approach to helping children reach their highest level of independence within their environment.  The program is designed for anyone 21 years of age or younger with impairments including orthopedic, musculoskeletal, neurologic, congenital, and developmental conditions. Physical therapy may be indicated to further develop motor skills such as sitting, crawling, walking, or balancing.  Other issues that may be addressed are a loss of range of motion, flexibility, or strength, possibly due to injury, illness, or surgery.  Our physical therapists, with special training in pediatric medical conditions, will evaluate a patient’s specific needs and design a unique program to address functional deficits."
+    },
+    {
+        "id": "1006",
+        "name": "Vestibular rehabilitation therapy",
+        "img": "https://i.ibb.co/7z8JkZb/Vestibular-therapy.jpg",
+        "description": "Vestibular rehabilitation therapy (VRT) is a specialized form of therapy intended to alleviate symptoms caused by vestibular disorders. It is an exercise-based program primarily designed to reduce vertigo and dizziness, visual disturbance, and/or imbalance and falls. After injury to the vestibular system occurs, the central nervous system can compensate for reduced function of the inner ears. Essentially, the brain copes with the disorientating signals coming from the vestibular system by learning to rely more on alternative signals coming from other systems in the body to maintain balance. This is achieved through various exercise strategies outlined below. With compensation, the patient’s symptoms can be alleviated which allows them to return to normal function."
+    }
+]

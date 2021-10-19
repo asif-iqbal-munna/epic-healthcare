@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Dr. Umma Salma Urmy (PT)",
+        "position": "Consultant Physiotherapist and Executive Director.",
+        "qualifications": [
+            "Master in Public Health (NSU)",
+            "BPT, Faculty of Medicine, DU (NITOR)",
+            "Certificate Course in Orthopedic Manual Therapy (COMT) (India)",
+            "Certificate Course in Musculoskeletal Ultrasonography.",
+            "Certificate in Manual Therapy & Biomechanics.",
+            "Certificate in Clinical Neurodynamics.",
+            "Health awareness speaker and educator.",
+            "Specialized in Musculoskeletal/ Orthopedic Physiotherapy, Stroke Rehabilitation, Urological & Gynecological Physiotherapy, Pediatric Physiotherapy and Respiratory Physiotherapy."
+        ],
+        "img": "https://i.ibb.co/4ZwRPPy/Dr-umme-salma-urmee.jpg"
+    },
+    {
+        "name": "Dr. Rebeka Sultana (PT)",
+        "position": "Senior Physiotherapist",
+        "qualifications": [
+            "BPT (DU), Faculty of Medicine (NITOR),",
+            "Pediatric physiotherapy (BCCW),",
+            "Tapping in Orthopedic and Sports injury, Gynecological Physiotherapy."
+        ],
+        "img": "https://i.ibb.co/tbvK0JL/Dr-Rebeka-Sulatana.jpg"
+    },
+    {
+        "name": "Dr. Md. Murad Hossain Mehedi (PT)",
+        "position": "Senior Physiotherapist",
+        "qualifications": [
+            "BPT ( DU) NITOR, PGD in Exercise physiology (BKSP),",
+            "Masters in Nutrition and food science (UniSA),",
+            "Eclectic approach for stroke (India),",
+            "Comprehensive Rehabilitation Services (PUM Netherlands)",
+            "Pain, Paralysis, disability, urological and Sports injury Specialis"
+        ],
+        "img": "https://i.ibb.co/F0MMTvW/Dr-Md-mrad-hossain.jpg"
+    },
+    {
+        "name": "Dr. Azhar islam (PT)",
+        "position": "Physiotherapist",
+        "qualifications": [
+            "BPT (DU) NITOR,",
+            "Masters in speech and language pathology(DU).",
+            "Urological Physiotherapy specialist, Trained in Musculoskeletal Physiotherapy, Dry Needling and Interventional Pain Management."
+        ],
+        "img": "https://i.ibb.co/tZ8RCNv/Dr-Azhar-islam.jpg"
+    },
+    {
+        "name": "Dr. Jamila Sultana Urme (PT)",
+        "position": "Physiotherapist",
+        "qualifications": [
+            "BPT (DU) NITOR,",
+            "PGD- Exercise physiology (BKSP).",
+            "Specialty in Stroke Rehabilitation, Respiratory and Chest Physiotherapy, Musculoskeletal Physiotherapy and Sports Physiotherapy."
+        ],
+        "img": "https://i.ibb.co/vLqPTQM/Dr-Jamila-Sultana.jpg"
+    },
+    {
+        "name": "Dr. Mokbul Ahmed Belal (PT)",
+        "position": "Physiotherapist",
+        "qualifications": [
+            "BPT (DU) NITOR,",
+            "PGD in Exercise physiology (BKSP),",
+            "Comprehensive Rehabilitation Services (PUM Netherlands).",
+            "Special trained on musculoskeletal system & Sports injury Specialist"
+        ],
+        "img": "https://i.ibb.co/L5vbfLj/Dr-Mokbul-Ahmed.jpg"
+    },
+    {
+        "name": "Dr Debika Dhar",
+        "position": "Physiotherapist",
+        "qualifications": [
+            "BPT (DU),",
+            "faculty of Medicine (NITOR),",
+            "Sports Injury Specialist and Trained in Neuro Rehabilitation"
+        ],
+        "img": "https://i.ibb.co/dpGmBYd/Dr-Debika-Dhar.jpg"
+    }
+]
