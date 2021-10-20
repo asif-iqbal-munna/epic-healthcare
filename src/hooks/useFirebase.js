@@ -17,6 +17,7 @@ const auth = getAuth();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const googleProvider = new GoogleAuthProvider();
   const signInWithGoogle = () => {
@@ -24,66 +25,64 @@ const useFirebase = () => {
   };
 
   const manuallySignUp = (email, password) => {
+    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        setUser(user);
+        setError("");
         // ...
       })
       .catch((error) => {
         const errorMessage = error.message;
         setError(errorMessage);
         // ..
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const manualSignIn = (email, password) => {
+    setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        setUser(user);
+        setError("");
         // ...
       })
       .catch((error) => {
         const errorMessage = error.message;
         setError(errorMessage);
-      });
-  };
-
-  const getUserName = (name) => {
-    console.log(name);
-    updateProfile(auth.currentUser, {
-      displayName: { name },
-    })
-      .then((result) => {
-        // Profile updated!
-        // ...
-        console.log(result.user);
       })
-      .catch((error) => {
-        // An error occurred
-        // ...
-      });
+      .finally(() => setIsLoading(false));
   };
-
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
+        // console.log(user);
         setUser(user);
         // ...
       } else {
         // User is signed out
         // ...
       }
+      setIsLoading(false);
     });
   }, []);
 
+  const setUserName = (name) => {
+    setIsLoading(true);
+    updateProfile(auth.currentUser, { displayName: name })
+      .then((result) => {})
+      .catch((error) => {})
+      .finally(() => setIsLoading(false));
+  };
+
   const logOut = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         // Sign-out successful.
@@ -91,7 +90,8 @@ const useFirebase = () => {
       })
       .catch((error) => {
         // An error happened.
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
   return {
     user,
@@ -101,7 +101,9 @@ const useFirebase = () => {
     logOut,
     manuallySignUp,
     manualSignIn,
-    getUserName,
+    setUserName,
+    isLoading,
+    setIsLoading,
   };
 };
 

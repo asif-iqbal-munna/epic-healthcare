@@ -4,16 +4,19 @@ import { useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
-  const { signInWithGoogle, error, manualSignIn, setError, user, setUser } =
+  const { signInWithGoogle, error, manualSignIn, setError, setIsLoading } =
     useAuth();
   const [mail, setMial] = useState("");
   const [password, setPassword] = useState("");
+
   const location = useLocation();
   const history = useHistory();
+
   const redirectUri = location.state?.from || "/";
   const getMail = (e) => {
     setMial(e.target.value);
   };
+
   const getPassword = (e) => {
     setPassword(e.target.value);
   };
@@ -24,13 +27,14 @@ const Login = () => {
   };
 
   const handledSignInWithGoogle = () => {
+    setIsLoading(true);
     signInWithGoogle()
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
         // console.log(user);
         // ...
-
+        setError("");
         history.push(redirectUri);
         // setUser(user);
       })
@@ -41,7 +45,8 @@ const Login = () => {
         // The AuthCredential type that was used.
         setError(errorMessage);
         // ...
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -59,11 +64,12 @@ const Login = () => {
             <div className="grid gap-6">
               <div className="col-span-12">
                 <input
-                  type="text"
+                  type="email"
                   onBlur={getMail}
                   name="email_address"
                   placeholder="Email"
                   autoComplete="email"
+                  required
                   className="mt-1 bg-gray-50 border-2 px-2 h-12 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
@@ -72,6 +78,7 @@ const Login = () => {
                   type="password"
                   onBlur={getPassword}
                   placeholder="Password"
+                  required
                   className="mt-1 bg-gray-50 border-2 px-2 h-12 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>

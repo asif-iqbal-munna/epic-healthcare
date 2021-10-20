@@ -4,7 +4,8 @@ import { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
-  const { signInWithGoogle, error, manuallySignUp, getUserName } = useAuth();
+  const { signInWithGoogle, error, manuallySignUp, setUserName, setError } =
+    useAuth();
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -21,8 +22,16 @@ const Register = () => {
 
   const handleRegistration = (e) => {
     e.preventDefault();
+    if (password.length < 8) {
+      setError("Password have to at least 8 characters");
+      return;
+    }
+    if (!/(?=.*[A-Z])/.test(password)) {
+      setError("Password must contain an Uppercase");
+      return;
+    }
     manuallySignUp(mail, password);
-    getUserName(name);
+    setUserName(name);
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -43,6 +52,7 @@ const Register = () => {
                   onBlur={getName}
                   name="first_name"
                   placeholder="Name"
+                  required
                   autoComplete="given-name"
                   className="mt-1 bg-gray-50 border-2 px-2 h-12 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
@@ -51,10 +61,11 @@ const Register = () => {
               <div className="col-span-12">
                 <input
                   onBlur={getMail}
-                  type="text"
+                  type="email"
                   name="email_address"
                   placeholder="Email"
                   autoComplete="email"
+                  required
                   className="mt-1 bg-gray-50 border-2 px-2 h-12 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
@@ -63,6 +74,7 @@ const Register = () => {
                   onBlur={getPassword}
                   type="password"
                   placeholder="Password"
+                  required
                   className="mt-1 bg-gray-50 border-2 px-2 h-12 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
